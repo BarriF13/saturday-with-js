@@ -4,3 +4,15 @@ function sendCars(day, ...allCarIds) {
   allCarIds.forEach( id => console.log(id) );
 }
 sendCars('Monday', 1,2,3);
+
+//Destructuring Arrays
+let carIds = [1,2,5];
+let [car1, car2, car3] = carIds;// if we don't put car3 the number 5 wont's be assign 
+
+console.log(car1, car2, car3);
+//Another version
+
+let carIDS = [1 ,4, 5];
+let carr1 , remainingCars;
+[carr1, ...remainingCars]= carIDS;
+console.log(car1 , remainingCars);
