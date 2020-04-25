@@ -23,7 +23,14 @@
 // console.log(id, style);
 
 // or like this 
-let car = { id:500, style: 'convertible' };
-let id , style;
-( {id, style} = car);
-console.log(id, style);
+// let car = { id:500, style: 'convertible' };
+// let id , style;
+// ( {id, style} = car);
+// console.log(id, style);
+
+//spread syntax
+function startCars(car1, car2, car3, ...rest){
+  console.log(...rest);
+}
+let carCodes = 'abcdefg';
+startCars(...carCodes);
