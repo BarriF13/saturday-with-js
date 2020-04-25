@@ -40,17 +40,61 @@
 
 //--controlling loop
 
-let i = 0;
-for (;i<12; i++){
-  if(i === 8){
-    break;// finish the loop
-  }
-}
-console.log(i);//8
+// let i = 0;
+// for (;i<12; i++){
+//   if(i === 8){
+//     break;// finish the loop
+//   }
+// }
+// console.log(i);//8
 
-for (let x = 0; x<4 ; x++){
-  if (x === 2) {
-continue;//pass the 2
+// for (let x = 0; x<4 ; x++){
+//   if (x === 2) {
+// continue;//pass the 2
+//   }
+//   console.log(x);
+// }
+
+// conditional Operator
+// console.log( ( 5 > 4) ? 'yes' : 'nope' );
+
+// Block scope--is similar function scope unless we use var instead of let
+
+// if(5 === 5 ) {
+//   let message = 'Equal';
+
+// }
+
+// console.log(message);
+// IIFE's--immediately invoked function Expression
+
+// let app = (function() {
+//   let carId = 123;
+
+//   console.log('in function');
+//   return {};
+// })();
+// console.log(app);
+
+//----IIFE and Closure
+
+// let app = (function () {
+//   let carId = 123;
+//   let getId = function () {
+//     return carId;
+//   };
+//   return {
+//     getId: getId
+//   };
+// })();
+// console.log(app.getId());
+
+// --- this
+
+let ob = {
+  carId: 123,
+  getId: function(){
+    return this.carId;
   }
-  console.log(x);
-}
+};
+console.log( ob.getId() );
