@@ -91,10 +91,43 @@
 
 // --- this
 
+// let ob = {
+//   carId: 123,
+//   getId: function(){
+//     return this.carId;
+//   }
+// };
+// console.log( ob.getId() );
+
+//---call and apply and bind
+//---call
+// let ob = {
+//   carId: 123,
+//   getId: function(){
+//     return this.carId;
+//   }
+// };
+// let newCar = { carId: 456};
+// console.log( ob.getId.call( newCar) ); 
+
+//---apply 
+// let ob = {
+//   carId: 123,
+//   getId: function(prefix){
+//     return prefix + this.carId;
+//   }
+// };
+// let newCar = { carId: 456};
+
+// console.log( ob.getId.apply( newCar, ['ID: ']) );
+
+//----bind or copy the function
 let ob = {
   carId: 123,
   getId: function(){
     return this.carId;
   }
 };
-console.log( ob.getId() );
+let newCar = { carId: 456};
+let newFn = ob.getId.bind(newCar);
+console.log( newFn());
