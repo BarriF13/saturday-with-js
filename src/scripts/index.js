@@ -133,20 +133,29 @@
 // console.log( newFn());
 
 //Arrow function with no parameters
-let getId = () => 123;
-console.log(getId());
+// let getId = () => 123;
+// console.log(getId());
 
 //Arrow function with one parameters
-let get = prefix => prefix + 123;
-console.log(get('ID: '));
+// let get = prefix => prefix + 123;
+// console.log(get('ID: '));
 
 //Arrow function with two parameters
 // let getI = (prefix, suffix) => prefix + 123 + suffix; //this one is not code block and has no {} 
 // console.log(getI( 'ID: ','!!') );
 
-let getI = (prefix, suffix) => {
-  return prefix + 123 + suffix;
- }; //this one is code block with {} so we have to use RETURN
-console.log(getI( 'ID: ','!!') );
+// let getI = (prefix, suffix) => {
+//   return prefix + 123 + suffix;//this one is code block with {} so we have to use RETURN
+//  }; 
+// console.log(getI( 'ID: ','!!') );
 
 // some coder use let getI = _=> instead of ()
+
+// Default Parameters
+let trackCar = function(carId, city='NY') {
+  console.log( `Tracking ${carId} in ${city}.`);
+};
+
+console.log( trackCar(123) );
+
+console.log( trackCar(123, 'Chicago') );
