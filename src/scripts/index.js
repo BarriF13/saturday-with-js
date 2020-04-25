@@ -29,8 +29,28 @@
 // console.log(id, style);
 
 //spread syntax
-function startCars(car1, car2, car3, ...rest){
-  console.log(...rest);
+// function startCars(car1, car2, car3, ...rest){
+//   console.log(...rest);
+// }
+// let carCodes = 'abcdefg';
+// startCars(...carCodes);
+
+//--parse integer
+// console.log( Number.parseFloat('55.00add'));
+
+//--controlling loop
+
+let i = 0;
+for (;i<12; i++){
+  if(i === 8){
+    break;// finish the loop
+  }
 }
-let carCodes = 'abcdefg';
-startCars(...carCodes);
+console.log(i);//8
+
+for (let x = 0; x<4 ; x++){
+  if (x === 2) {
+continue;//pass the 2
+  }
+  console.log(x);
+}
