@@ -180,17 +180,29 @@
 // vehicle1.start();
 
 //----prototype
-function Car(id){
-  this.carId = id;
-}
-Car.prototype.start = function(){
-  console.log('start: '+ this.carId);
-};
-let myCar =new Car(12);
-myCar.start();
+// function Car(id){
+//   this.carId = id;
+// }
+// Car.prototype.start = function(){
+//   console.log('start: '+ this.carId);
+// };
+// let myCar =new Car(12);
+// myCar.start();
 
 //--Expanding prototype
-String.prototype.hello = function(){
-  return this.toString()+ 'Hello';
-};
-console.log('foo '.hello());
+// String.prototype.hello = function(){
+//   return this.toString()+ 'Hello';
+// };
+// console.log('foo '.hello());
+
+//---JSON: JAVASCRIPT OBJECT NOTATION-- turning data to json and turning json to data
+let jsonIn =
+`[
+  {"carId" : 123 },
+  {"carId" : 456 },
+  {"carId" : 789 }
+]
+`;
+let carId = JSON.parse(jsonIn);
+console.log(carId);
+console.log(JSON.stringify(carId));
