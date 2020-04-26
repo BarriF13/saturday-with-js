@@ -152,10 +152,29 @@
 // some coder use let getI = _=> instead of ()
 
 // Default Parameters
-let trackCar = function(carId, city='NY') {
-  console.log( `Tracking ${carId} in ${city}.`);
-};
+// let trackCar = function(carId, city='NY') {
+//   console.log( `Tracking ${carId} in ${city}.`);
+// };
 
-console.log( trackCar(123) );
+// console.log( trackCar(123) );
 
-console.log( trackCar(123, 'Chicago') );
+// console.log( trackCar(123, 'Chicago') );
+
+//-- construction function---this function is making new object car 
+function Car(){
+  console.log(this);
+}
+// car(); we can't call it like that we have to use the function as blue print
+
+let vehicle = new Car();
+
+//---second example
+function Carr(id){
+  this.carId = id;// attribute
+  this.start = function(){//behavior
+    console.log('start: '+ this.carId);
+  };
+}
+
+let vehicle1 = new Carr(123);
+vehicle1.start();
