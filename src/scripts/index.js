@@ -161,20 +161,36 @@
 // console.log( trackCar(123, 'Chicago') );
 
 //-- construction function---this function is making new object car 
-function Car(){
-  console.log(this);
-}
+// function Car(){
+//   console.log(this);
+// }
 // car(); we can't call it like that we have to use the function as blue print
 
-let vehicle = new Car();
+// let vehicle = new Car();
 
 //---second example
-function Carr(id){
-  this.carId = id;// attribute
-  this.start = function(){//behavior
-    console.log('start: '+ this.carId);
-  };
-}
+// function Carr(id){
+//   this.carId = id;// attribute
+//   this.start = function(){//behavior
+//     console.log('start: '+ this.carId);
+//   };
+// }
 
-let vehicle1 = new Carr(123);
-vehicle1.start();
+// let vehicle1 = new Carr(123);
+// vehicle1.start();
+
+//----prototype
+function Car(id){
+  this.carId = id;
+}
+Car.prototype.start = function(){
+  console.log('start: '+ this.carId);
+};
+let myCar =new Car(12);
+myCar.start();
+
+//--Expanding prototype
+String.prototype.hello = function(){
+  return this.toString()+ 'Hello';
+};
+console.log('foo '.hello());
