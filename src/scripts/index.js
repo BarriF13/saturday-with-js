@@ -208,28 +208,45 @@
 // console.log(JSON.stringify(carId));
 
 //-----Array iteration
-let carIds = [
-  { carId: 123 , style: 'sedan'},
-  { carId: 456 , style: 'convertible'},
-  { carId: 789 , style: 'sedan'}
-];
+// let carIds = [
+//   { carId: 123 , style: 'sedan'},
+//   { carId: 456 , style: 'convertible'},
+//   { carId: 789 , style: 'sedan'}
+// ];
 
-carIds.forEach( car => console.log( car));
-carIds.forEach(
-  ( car, index) => console.log(car, index));
-  // --filtering the array for specific 
-  let convertible = carIds.filter(
-    car => car.style === 'convertible'
-  );
-  console.log(convertible);
+// carIds.forEach( car => console.log( car));
+// carIds.forEach(
+//   ( car, index) => console.log(car, index));
+//   // --filtering the array for specific 
+//   let convertible = carIds.filter(
+//     car => car.style === 'convertible'
+//   );
+//   console.log(convertible);
 
   //-- using every method to check true or false
-  let result = carIds.every(
-    car => car.carId > 0
-  );
-  console.log(result);
-  //--use find method
-  let car = carIds.find(
-    car => car.carId >500
-  );
-  console.log(car);
+  // let result = carIds.every(
+  //   car => car.carId > 0
+  // );
+  // console.log(result);
+  // //--use find method
+  // let car = carIds.find(
+  //   car => car.carId >500
+  // );
+  // console.log(car);
+
+  // ---Class
+  // class Car {
+
+  // }
+  // let car = new Car();
+  // console.log(car);
+  
+  //--constructor in the class
+  class Car {
+    constructor(id){
+      this.id = id; //'this' is only use inside of the class
+    }
+  }
+  let car = new Car(107);
+  car.id = 20922;
+  console.log(car.id);
