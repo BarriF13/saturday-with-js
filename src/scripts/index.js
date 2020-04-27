@@ -335,11 +335,29 @@
 
 //--Timer
 
-let intervalId = setInterval ( function() {
-  console.log('1 second passed');
-}, 1000) ;
-clearInterval(intervalId);
+// let intervalId = setInterval ( function() {
+//   console.log('1 second passed');
+// }, 1000) ;
+// clearInterval(intervalId);
 
 //-- location-- below give us the location of our site
-console.log(location.href);
-console.log(document.location.href);
+// console.log(location.href);
+// console.log(document.location.href);
+
+//--selection DOM
+
+let el = document.getElementById('first');
+console.log(el);
+let els = document.getElementsByClassName('p1');// we get the first two paragraph as an array
+console.log(els);
+let pi = document.getElementsByTagName('p');
+console.log(pi);
+
+//--Modifying DOM elements
+
+let element = document.getElementById('first');
+element.textContent = 'New content...';
+element.setAttribute('foo', 'foo value');
+element.classList.add('p2');
+element.style.color = 'blue';
+console.log(element);
