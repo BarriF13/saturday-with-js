@@ -276,23 +276,42 @@
 //  console.log(car.identify('!!!'));
 
 //--inheritance-- vehicle would be the parent 
+// class Vehicle {
+//   constructor(type){
+//     this.type = type;
+//   }
+//   start(){
+//     return `Starting with: ${this.type}`;
+//   }
+// }
+
+// class Car extends Vehicle { // this is without constructor
+
+// }
+// let car = new Car('Sports car');
+// console.log(car.start());
+
+// class Plane extends Vehicle {
+
+// }
+// let plane = new Plane('little plane');
+// console.log(plane.start());
+
+// -- inheritance and constructor
 class Vehicle {
-  constructor(type){
+  constructor(type) {
     this.type = type;
   }
-  start(){
-    return `Starting with: ${this.type}`;
-  }
+  start() {
+    return `Starting with : ${this.type}`;
+    }
 }
 
-class Car extends Vehicle { // this is without constructor
-
+class Car extends Vehicle {
+ start(){
+   return 'in car start..' + super.start();// if we use it without super it will show only child method
+ }
 }
-let car = new Car('Sports car');
+let car = new Car('4x4 cars');
+
 console.log(car.start());
-
-class Plane extends Vehicle {
-
-}
-let plane = new Plane('little plane');
-console.log(plane.start());
