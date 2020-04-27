@@ -365,24 +365,46 @@
 //--- Errors in js
 //-- try and catch, finally
 
-try {
-  let car = newCar;
-}
-catch(error) {
-  console.log('error: ', error);
-}
-finally{
-console.log('this always executes');
+// try {
+//   let car = newCar;
+// }
+// catch(error) {
+//   console.log('error: ', error);
+// }
+// finally{
+// console.log('this always executes');
 
-}
-// developer defined error --throw
+// }
+// // developer defined error --throw
 
-try {
-  throw new Error ('my custom error');
-}
-catch(error){
-  console.log('error: ', error);
-}
-finally {
-  console.log('this always runs');
-}
+// try {
+//   throw new Error ('my custom error');
+// }
+// catch(error){
+//   console.log('error: ', error);
+// }
+// finally {
+//   console.log('this always runs');
+// }
+
+//-- http calls ot interval ot timer we use PROMISE
+//give back value to you
+
+// let promise = new Promise(
+//   function(resolve, reject){
+//     // setTimeout(resolve, 100, 'someValue');
+//    setTimeout(reject, 100, 'someValue');
+//   }
+// );
+// console.log(promise);
+
+//-- settling a promise
+let promise = new Promise(
+  function(resolve, reject) {
+    setTimeout(resolve, 100, 'Some value');
+  }
+);
+promise.then(
+  value => console.log('fulfilled: '+ value),
+  error => console.log('rejected: '+ error)
+);
