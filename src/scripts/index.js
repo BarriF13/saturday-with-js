@@ -262,14 +262,37 @@
   // }
   // let car = new Car(107);
   // console.log(car.identify());
+
  //--Method in the class with argument
- class Car {
-   constructor(id){
-     this.id = id;
-   }
-   identify(suffix){
-     return `Car Id: ${this.id} ${suffix}`;
-   }
- }  
- let car = new Car(107);
- console.log(car.identify('!!!'));
+//  class Car {
+//    constructor(id){
+//      this.id = id;
+//    }
+//    identify(suffix){
+//      return `Car Id: ${this.id} ${suffix}`;
+//    }
+//  }  
+//  let car = new Car(107);
+//  console.log(car.identify('!!!'));
+
+//--inheritance-- vehicle would be the parent 
+class Vehicle {
+  constructor(type){
+    this.type = type;
+  }
+  start(){
+    return `Starting with: ${this.type}`;
+  }
+}
+
+class Car extends Vehicle { // this is without constructor
+
+}
+let car = new Car('Sports car');
+console.log(car.start());
+
+class Plane extends Vehicle {
+
+}
+let plane = new Plane('little plane');
+console.log(plane.start());
