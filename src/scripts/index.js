@@ -252,14 +252,24 @@
   // console.log(car.id);
 
   //--Method in the class
-  class Car {
-    constructor(id){
-      this.id = id; 
-    }
-    identify(){
-      return `Car Id: ${this.id} `;//'this' is only use inside of the class
-    }
-  }
-  let car = new Car(107);
-  console.log(car.identify());
-  
+  // class Car {
+  //   constructor(id){
+  //     this.id = id; 
+  //   }
+  //   identify(){
+  //     return `Car Id: ${this.id} `;//'this' is only use inside of the class
+  //   }
+  // }
+  // let car = new Car(107);
+  // console.log(car.identify());
+ //--Method in the class with argument
+ class Car {
+   constructor(id){
+     this.id = id;
+   }
+   identify(suffix){
+     return `Car Id: ${this.id} ${suffix}`;
+   }
+ }  
+ let car = new Car(107);
+ console.log(car.identify('!!!'));
