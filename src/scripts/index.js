@@ -323,12 +323,23 @@
 //     this.id = id;
 //   }
 // }// we move the car class to another file in model folder called car.js if we use the code below it would be undefined so we need to import the car class first
-import { Car } from './models/car.js';
+// import { Car } from './models/car.js';
 //  let car = new Car (22);
 //  console.log(car.id);
 
  //-- working with DOM
 
  //if we are using window withing a module we have to reference it specifically with using let, because window is global object
- let year = 1978;
- console.log(year);
+//  let year = 1978;
+//  console.log(year);
+
+//--Timer
+
+let intervalId = setInterval ( function() {
+  console.log('1 second passed');
+}, 1000) ;
+clearInterval(intervalId);
+
+//-- location-- below give us the location of our site
+console.log(location.href);
+console.log(document.location.href);
