@@ -298,20 +298,31 @@
 // console.log(plane.start());
 
 // -- inheritance and constructor
-class Vehicle {
-  constructor(type) {
-    this.type = type;
-  }
-  start() {
-    return `Starting with : ${this.type}`;
-    }
-}
+// class Vehicle {
+//   constructor(type) {
+//     this.type = type;
+//   }
+//   start() {
+//     return `Starting with : ${this.type}`;
+//     }
+// }
 
-class Car extends Vehicle {
- start(){
-   return 'in car start..' + super.start();// if we use it without super it will show only child method
- }
-}
-let car = new Car('4x4 cars');
+// class Car extends Vehicle {
+//  start(){
+//    return 'in car start..' + super.start();// if we use it without super it will show only child method
+//  }
+// }
+// let car = new Car('4x4 cars');
 
-console.log(car.start());
+// console.log(car.start());
+
+//--Module
+
+// class Car {
+//   constructor(id){
+//     this.id = id;
+//   }
+// }// we move the car class to another file in model folder called car.js if we use the code below it would be undefined so we need to import the car class first
+import { Car } from './models/car.js';
+ let car = new Car (22);
+ console.log(car.id);
