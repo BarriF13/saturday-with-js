@@ -242,11 +242,24 @@
   // console.log(car);
   
   //--constructor in the class
+  // class Car {
+  //   constructor(id){
+  //     this.id = id; //'this' is only use inside of the class
+  //   }
+  // }
+  // let car = new Car(107);
+  // car.id = 20922;
+  // console.log(car.id);
+
+  //--Method in the class
   class Car {
     constructor(id){
-      this.id = id; //'this' is only use inside of the class
+      this.id = id; 
+    }
+    identify(){
+      return `Car Id: ${this.id} `;//'this' is only use inside of the class
     }
   }
   let car = new Car(107);
-  car.id = 20922;
-  console.log(car.id);
+  console.log(car.identify());
+  
